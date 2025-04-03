@@ -59,8 +59,8 @@ body {
     padding: 0 20px;
     max-width: 320px;
     min-height: 812px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    /* border-left: 1px solid black;
+    border-right: 1px solid black; */
 }
 
 input[type=text] {
