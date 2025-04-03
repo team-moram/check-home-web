@@ -1,42 +1,135 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.top-app-bar-title {
+    font-family: var(--typo-font-type);
+    font-size: var(--font-size-body-large);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 28.5px */
+    letter-spacing: var(--typo-letter-spacing-0);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.content {
+    display: flex;
+    width: 340px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box-title {
+    align-self: stretch;
+
+    color: var(--color-text-basic, #212121);
+    /* label/small */
+    font-family: var(--typo-font-type, Pretendard);
+    font-size: var(--font-size-label-small, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: var(--typo-label-small-letter-spacing, 0px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.box {
+    display: flex;
+    height: 50px;
+    padding: 0px var(--padding-6, 16px);
+    align-items: center;
+    gap: var(--gap-3, 8px);
+    align-self: stretch;
+
+    border-radius: var(--radius-4, 8px);
+    border: var(--border-width-variable-regular, 1px) solid var(--color-input-border, #BDBDBD);
+    background: var(--color-input-surface, #FFF);
 }
 
-.card {
-  padding: 2em;
+.reset-password-container {
+    display: flex;
+    width: 340px;
+    padding-top: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-8);
 }
 
-.read-the-docs {
-  color: #888;
+.reset-password-form-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-7, 24px);
+    align-self: stretch;
+}
+
+.button-disable {
+    display: flex;
+    height: 50px;
+    padding: 0px var(--padding-8, 24px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-3, 8px);
+    align-self: stretch;
+
+    border-radius: var(--radius-4, 8px);
+    background: var(--color-button-disabled-fill, #EAEAEA);
+}
+
+.button {
+    color: var(--color-text-basic-inverse, #FFF);
+    text-align: center;
+    /* body/small-semiBold */
+    font-family: var(--typo-font-type, Pretendard);
+    font-size: var(--font-size-body-small, 15px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 22.5px */
+    letter-spacing: var(--typo-letter-spacing-0, 0px);
+
+    display: flex;
+    height: 50px;
+    padding: 0px var(--padding-8, 24px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-3, 8px);
+    align-self: stretch;
+
+    border-radius: var(--radius-4, 8px);
+    background: var(--color-button-primary-fill, #FC5E03);
+}
+
+.input-title {
+    align-self: stretch;
+
+    color: var(--color-text-basic);
+    /* label/small */
+    font-family: var(--typo-font-type, Pretendard);
+    font-size: var(--font-size-label-small);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: var(--typo-label-small-letter-spacing);
+}
+
+input::placeholder {
+    color: var(--color-text-subtler);
+    /* body/small */
+    font-family: var(--typo-font-type);
+    font-size: var(--font-size-body-small);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 22.5px */
+    letter-spacing: var(--typo-letter-spacing-0);
+}
+
+input:focus {
+    border-radius: var(--radius-4);
+    border: var(--border-width-regular) solid var(--color-input-border-active);
+    background: var(--color-input-surface);
+}
+
+.validate-message {
+    color: var(--color-text-danger, #DE3412);
+    /* label/xsmall */
+    font-family: var(--typo-font-type, Pretendard);
+    font-size: var(--font-size-label-xsmall, 12px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 18px */
+    letter-spacing: var(--typo-letter-spacing-0, 0px);
 }

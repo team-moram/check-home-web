@@ -1,81 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
+    --padding-6: 16px;
+    --padding-8: 24px;
 
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    --gap-3: 8px;
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 
-a {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-}
+    font-family: Pretendard;
+    background-color: white;
 
-a:hover {
-    color: #535bf2;
+    --color-text-subtler: #9E9E9E;
+    --color-text-danger: #DE3412;
+
+    --typo-font-type: 'Pretendard';
+    --typo-letter-spacing-0: 0px;
+    --font-size-body-large: 19px;
+    --font-size-body-small: 15px;
+    --font-size-label-small: 14px;
+    --font-size-label-xsmall: 12px;
+
+    --radius-4: 8px;
+    --border-width-regular: 1px;
+    --border-width-variable-regular: 1px;
+
+    --color-input-border-active: #212121;
+    --color-input-border: #BDBDBD;
+    --color-input-surface: #FFF;
+
+    --gap-7: 24px;
+    --gap-8: 32px;
+
+    --color-text-basic: #212121;
+    --color-text-basic-inverse: #FFF;
+
+    --typo-label-small-letter-spacing: 0px;
+
+    --color-button-disabled-fill: #EAEAEA;
+    --color-button-primary-fill: #FC5E03;
 }
 
 body {
     margin: 0;
     display: flex;
-    place-items: center;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
+    background-color: white;
 }
 
 .default-layout {
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
     min-width: 320px;
     padding: 0 20px;
-    max-width: 349px;
-    min-height: 100%;
+    max-width: 320px;
+    min-height: 812px;
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
 
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
+input[type=text] {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-color: #9A9A9A
 }
 
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s;
+input[type=password] {
+    flex: 1 0 0;
+    color: var(--color-text-subtler, #9E9E9E);
+    /* body/small */
+    font-family: var(--typo-font-type, Pretendard);
+    font-size: var(--font-size-body-small, 15px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 22.5px */
+    letter-spacing: var(--typo-letter-spacing-0, 0px);
 }
 
-button:hover {
-    border-color: #646cff;
+input[type=text]:focus {
+    border: none;
+    outline: none;
+    --tw-ring-color: #ffffff;
+    --tw-ring-shadow: none;
 }
 
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-
-    a:hover {
-        color: #747bff;
-    }
-
-    button {
-        background-color: #f9f9f9;
-    }
+input[type=password]:focus {
+    border: none;
+    outline: none;
+    --tw-ring-color: #ffffff;
+    --tw-ring-shadow: none;
 }
