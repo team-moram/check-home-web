@@ -70,7 +70,7 @@ input[type=text] {
     background-color: transparent;
     padding: 0;
     margin: 0;
-    font-color: #9A9A9A
+    color: #9A9A9A;
 }
 
 input[type=password] {

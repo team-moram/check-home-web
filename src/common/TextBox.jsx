@@ -25,7 +25,7 @@ const TextBox = ({ type, placeholder, value, onTextBoxChange, validateMessage })
                     </div>
                 }
             </div>
-            <div className={"validate-message"}>
+            <div className={"validate-message pl-[12px]"}>
                 {validateMessage}
             </div>
         </div>

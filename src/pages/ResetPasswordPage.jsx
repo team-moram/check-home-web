@@ -4,7 +4,7 @@ import TextInput from "../common/TextInput.jsx";
 import TextBox from "../common/TextBox.jsx";
 import {useEffect, useState} from "react";
 import Button from "../common/Button.jsx";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const ResetPasswordPage = () => {
 
@@ -16,12 +16,24 @@ const ResetPasswordPage = () => {
     const [validatePasswordMessage, setValidatePasswordMessage] = useState("")
     const [validateConfirmPasswordMessage, setValidateConfirmPasswordMessage] = useState("")
 
+    const [uuid, setUuid] = useState("")
+
     const navigate = useNavigate()
 
     const isValidPassword = (password) => {
         const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/
         return regex.test(password)
     }
+
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search)
+        const uuidParam = params.get("uuid")
+        if (uuidParam) {
+            setUuid(uuidParam)
+            window.history.replaceState({}, '', '/reset-password')
+        }
+    }, [])
 
     useEffect(() => {
         if (password === "" || isValidPassword(password)) {

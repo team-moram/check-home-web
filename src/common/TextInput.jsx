@@ -5,7 +5,7 @@ const TextInput = ({title, placeholder, value, onChangeValue, type, validateMess
     return (
         <div className={"w-full"}>
             <div className={"box-title"}>{title}</div>
-            <TextBox placeholder={placeholder} value={value} onTextBoxChange={onChangeValue} type={type} validateMessage={validateMessage}/>
+            <TextBox placeholder={placeholder} value={value} onTextBoxChange={onChangeValue} type={type} validateMessage={validateMessage} />
         </div>
     )
 }
