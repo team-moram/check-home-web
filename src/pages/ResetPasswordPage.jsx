@@ -56,7 +56,7 @@ const ResetPasswordPage = () => {
                              validateMessage={validateConfirmPasswordMessage}
                              value={confirmPassword} onTextBoxChange={(e) => setConfirmPassword(e.target.value)}/>
                     </div>
-                    <Button disable={disabled} btnText={"적용하기"} onClick={() => navigate("/reset-password/success")}/>
+                    <Button disable={disabled} btnText={"적용하기"} onClickBtn={() => {navigate("/reset-password/success")}}/>
                 </div>
             </Content>
         </div>
