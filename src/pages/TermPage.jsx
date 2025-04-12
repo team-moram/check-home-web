@@ -23,16 +23,16 @@ const TermPage = () => {
 
     return (
         <div className="flex flex-col min-h-screen">
-            <div className="fixed top-0 left-0 right-0 z-10 bg-white">
-                <div className="relative h-[56px]">
+            <div className="fixed top-0 z-10 bg-white">
+                <div className="h-[56px] relative min-w-[320px] max-w-[320px]">
                     <button 
-                        className="absolute top-1/2 transform -translate-y-1/2 z-20"
+                        className="absolute left-1 top-1/2 transform -translate-y-1/2 z-20 p-2"
                         onClick={() => window.close()} 
                     >
                         <CloseIcon />
                     </button>
-                    <div className="absolute w-full h-full flex items-center justify-center">
-                        <TopAppBar name={termTitle} className="w-full text-center" />
+                    <div className="absolute w-full inset-0 flex items-center justify-center">
+                        <TopAppBar name={termTitle} />
                     </div>
                 </div>
             </div>
